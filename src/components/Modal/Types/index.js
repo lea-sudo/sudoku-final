@@ -6,6 +6,7 @@ import prompt from './Prompt.svelte';
 import welcome from './Welcome.svelte';
 import gameover from './GameOver.svelte';
 import importModal from './Import.svelte';
+import strategyIntro from './StrategyIntro.svelte';
 
 export default {
 	share,
@@ -15,5 +16,6 @@ export default {
 	prompt,
 	welcome,
 	gameover,
-	import: importModal
+	import: importModal,
+	strategyIntro
 }

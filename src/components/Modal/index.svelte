@@ -17,7 +17,7 @@
 	<div class="modal">
 		<button transition:fade={{duration: MODAL_DURATION}} class="modal-overlay" on:click={handleOverlayClick} tabindex="-1"></button>
 
-		<div transition:scale={{duration: MODAL_DURATION}} class="modal-container">
+		<div transition:scale={{duration: MODAL_DURATION}} class="modal-container{ $modal === 'strategyIntro' ? ' wide-modal' : '' }">
 			<div class="modal-content">
 				<svelte:component this={types[$modal]} data={$modalData} hideModal={modal.hide} />
 			</div>
@@ -46,6 +46,9 @@
 	@screen md {
 		.modal-container {
 			@apply max-w-md;
+		}
+		.wide-modal {
+			@apply max-w-5xl;
 		}
 	}
 </style>
